@@ -2,7 +2,6 @@
 
 pragma solidity ^0.8.4;
 
-
 contract Multisig {
 
   address public user_0;
@@ -30,13 +29,11 @@ contract Multisig {
   }
 
 
-
   constructor(address _user0, address _user1, address _user2){
     user_0 = _user0;
     user_1 = _user1;
     user_2 = _user2; 
   }
-
 
   function voting(bool choice) external onlyMultisigs{
     // check if user has already voted before
